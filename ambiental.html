@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="shortcut icon" type="image/png" href="">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 	<style>
+ 		.dropdown-submenu{ position: relative; }
+
+		.dropdown-submenu>.dropdown-menu{
+		  top:0;
+		  left:100%;
+		  margin-top:-6px;
+		  margin-left:-1px;
+		  -webkit-border-radius:0 6px 6px 6px;
+		  -moz-border-radius:0 6px 6px 6px;
+		  border-radius:0 6px 6px 6px;
+		}
+
+		.dropdown-submenu>a:after{
+		  display:block;
+		  content:" ";
+		  float:right;
+		  width:0;
+		  height:0;
+		  border-color:transparent;
+		  border-style:solid;
+		  border-width:5px 0 5px 5px;
+		  border-left-color:#cccccc;
+		  margin-top:5px;margin-right:-10px;
+		}
+		.dropdown-submenu:hover>a:after{
+		  border-left-color:#555;
+		}
+		.dropdown-submenu.pull-left{ float: none; }
+		.dropdown-submenu.pull-left>.dropdown-menu{
+		  left: -100%;
+		  margin-left: 10px;
+		  -webkit-border-radius: 6px 0 6px 6px;
+		  -moz-border-radius: 6px 0 6px 6px;
+		  border-radius: 6px 0 6px 6px;
+		}
+ 	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse">
+		<div class="container">
+		  	<div class="container-fluid">
+		    	<!-- Brand and toggle get grouped for better mobile display -->
+		    	<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        		<span class="sr-only">Toggle navigation</span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		      		</button>
+		      		<a class="navbar-brand" href="#">Proyeccion Social</a>
+		   		 </div>
+
+			    	<!-- Collect the nav links, forms, and other content for toggling -->
+			   	<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+			      	<ul class="nav navbar-nav">
+			        	<li><a href="/">inicio</a></li>
+			        	<!-- <li><a href="/">Escuelas</a></li> -->
+			        	<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Escuelas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Civil y Minas</a>
+								<ul class="dropdown-menu menu-sub">
+									<li><a href="granulometria.html">Ganulometria</a></li>
+									<li><a href="limites.html">Limites de Consistencia</a></li>
+								</ul>
+							</li>
+                            <li><a href="ambiental.html">Ambiental</a></li>
+                            <li><a href="mecatronica.html">Mecatronica</a></li>
+                        </ul>
+                    </li>
+			        	<li><a href="#">Login</a></li>
+			      	</ul>
+			    </div><!-- /.navbar-collapse -->
+		  	</div><!-- /.container-fluid -->
+			
+		</div>
+	</nav>
+	<main class="main ambiental">
+		<div class="container">
+			<h2 class="titulo-secundario">
+				Ambiental
+			</h2>
+			<h3 class="titulo-terciario">
+				Matriz cualitativa de impacto
+			</h3>
+			<form action="">
+				<div class="form-group">
+					<select name="mes" id="mes">
+						<option value="">Enero</option>
+						<option value="">Febrero</option>
+					</select>
+					<select name="muestra" id="muestra">
+						<option value="">Muestra 0001</option>
+						<option value="">Muestra 0002</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Consultar">
+				</div>
+			</form>
+			<div class="matriz">
+				<div class="encabezado alert-success">
+					<h4>muestra 0001</h4>
+					<span> - </span>
+					<h4>Casaplca</h4>
+				</div>
+				<table class="table table-bordered">
+					<tr>
+						<th rowspan="2" colspan="3" class="middle" style="background-color: #C55A27; font-size: 2rem;">
+							valoracion del impacto
+						</th>
+						<th colspan="6" class="middle" style="background-color: #C55A27;">atributos</th>
+						<!-- <th>caracter</th> -->
+						<!-- <th>atributos</th> -->
+						<th rowspan="2" class="vertical"><div><span>nivel de inportancia</span></div></th>
+						<th rowspan="3" class="middle" style="background-color: #ED2024;">juicio </th>
+					</tr>
+					<tr>
+						<th class="vertical" style="background-color: #F2B083;"><div><span>carater</span></div></th>
+						<th class="vertical" style="background-color: #F2B083;"><div><span>en el tiempo</span></div></th>
+						<th class="vertical" style="background-color: #F2B083;"><div><span>duracion</span></div></th>
+						<th class="vertical" style="background-color: #F2B083;"><div><span>extencion</span></div></th>
+						<th class="vertical" style="background-color: #F2B083;"><div><span>reversibilidad</span></div></th>
+						<th class="vertical" style="background-color: #F2B083;"><div><span>recuperabilidad</span></div></th>
+					</tr>
+					<tr>
+						<th class="middle" style="background-color: #BDD7EE;">medio</th>
+						<th colspan="2" class="middle" style="background-color: #BDD7EE;">medio impactado</th>
+						<th class="middle" style="background-color: #F2B083;">ca</th>
+						<th class="middle" style="background-color: #F2B083;">ca</th>
+						<th class="middle" style="background-color: #F2B083;">ca</th>
+						<th class="middle" style="background-color: #F2B083;">ca</th>
+						<th class="middle" style="background-color: #F2B083;">ca</th>
+						<th class="middle" style="background-color: #F2B083;">ca</th>
+						<th class="middle" style="background-color: #F2B083;">l</th>
+					</tr>
+					<tr>
+						<th rowspan="19" class="vertical1">
+							<div><span>abiotico</span></div>
+						</th>
+						
+					</tr>
+					<tr>
+						<th rowspan="4" class="vertical1"><div><span>aire</span></div></th>
+					</tr>
+					<tr>
+						<th>deterioro de la calidad</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>cambio de temperatura</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+						<!-- <td>deterioro</td> -->
+						
+					</tr>
+					<tr>
+						<th>presencia de colores</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th rowspan="9" class="vertical1"><div><span>agua</span></div></th>	
+					</tr>
+					<tr>
+						<th>alteracion de la calidad</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>TURBIDEZ</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>VARIACIÓN DE PH</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>VARIACIÓN TEMPERATURA</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>AGUAS RESIDUALES DOMESTICAS</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>AGUAS RESIDUALES INDUSTRIALES</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>RESIDUOS SOLIDOS</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>PRESENCIA DE ESPUMA</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th rowspan="5" class="vertical1"><div><span>suelo</span></div></th>
+					</tr>
+					<tr>
+						<th>DEFORESTACIÓN</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>ZONAS INESTABLES</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>EROSIÓN HIDRICA</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>RESIDUOS INCONTROLADOS</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th rowspan="7" class="vertical1"><div><span>biotico</span></div></th>
+					</tr>
+					<tr>
+						<th rowspan="3" class="vertical1"><div><span>FAUNA</span></div></th>
+					</tr>
+					<tr>
+						<th>PERDIDA DE FAUNA</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>PERDIDA DE FAUNA</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th rowspan="3" class="vertical1"><div><span>FLORA</span></div></th>
+					</tr>
+					<tr>
+						<th>DISMINUCIÓN DE COBERTURA VEGETAL</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>PÉRDIDA DE BIODIVERSIDAD</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th rowspan="8"><div><span>SOCIO ECONOMICO Y CULTURAL</span></div></th>
+					</tr>
+					<tr>
+						<th rowspan="3"><div><span>NIVEL ECONOMICO</span></div></th>
+					</tr>
+					<tr>
+						<th>CAMBIO EN LAS ACTIVIDADES ECONOMICAS</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th>NIVEL DE PRODUCTIVIDAD</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th rowspan="2"><div><span>CULTURAL</span></div></th>
+					</tr>
+					<tr>
+						<th>PÉRDIDA, DAÑO Y/O AFECTACIÓN DEL PATRIMONIO</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th rowspan="2"><div><span>salud</span></div></th>
+					</tr>
+					<tr>
+						<th>ALTERACIÓN EN LA CALIDAD DE VIDA</th>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>-10</td>
+						<td>severo</td>
+					</tr>
+					<tr>
+						<th colspan="9">total</th>
+						<td>-187</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="contacto col-md-6">
+				contacto@continental.edu.pe
+			</div>
+			<div class="derechos col-md-6">
+				Derechos Reservados 2018
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script>
+		 (function($){
+	$(document).ready(function(){
+		$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+			event.preventDefault(); 
+			event.stopPropagation(); 
+			$(this).parent().siblings().removeClass('open');
+			$(this).parent().toggleClass('open');
+		});
+	});
+})(jQuery);
+	</script>
+</body>
+</html>

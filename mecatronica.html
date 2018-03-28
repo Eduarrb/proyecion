@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="shortcut icon" type="image/png" href="">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+ 	<style>
+ 		.dropdown-submenu{ position: relative; }
+
+		.dropdown-submenu>.dropdown-menu{
+		  top:0;
+		  left:100%;
+		  margin-top:-6px;
+		  margin-left:-1px;
+		  -webkit-border-radius:0 6px 6px 6px;
+		  -moz-border-radius:0 6px 6px 6px;
+		  border-radius:0 6px 6px 6px;
+		}
+
+		.dropdown-submenu>a:after{
+		  display:block;
+		  content:" ";
+		  float:right;
+		  width:0;
+		  height:0;
+		  border-color:transparent;
+		  border-style:solid;
+		  border-width:5px 0 5px 5px;
+		  border-left-color:#cccccc;
+		  margin-top:5px;margin-right:-10px;
+		}
+		.dropdown-submenu:hover>a:after{
+		  border-left-color:#555;
+		}
+		.dropdown-submenu.pull-left{ float: none; }
+		.dropdown-submenu.pull-left>.dropdown-menu{
+		  left: -100%;
+		  margin-left: 10px;
+		  -webkit-border-radius: 6px 0 6px 6px;
+		  -moz-border-radius: 6px 0 6px 6px;
+		  border-radius: 6px 0 6px 6px;
+		}
+ 	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse">
+		<div class="container">
+		  	<div class="container-fluid">
+		    	<!-- Brand and toggle get grouped for better mobile display -->
+		    	<div class="navbar-header">
+		      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        		<span class="sr-only">Toggle navigation</span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		        		<span class="icon-bar"></span>
+		      		</button>
+		      		<a class="navbar-brand" href="#">Proyeccion Social</a>
+		   		 </div>
+
+			    	<!-- Collect the nav links, forms, and other content for toggling -->
+			   	<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+			      	<ul class="nav navbar-nav">
+			        	<li><a href="/">inicio</a></li>
+			        	<!-- <li><a href="/">Escuelas</a></li> -->
+			        	<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Escuelas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Civil y Minas</a>
+								<ul class="dropdown-menu menu-sub">
+									<li><a href="granulometria.html">Ganulometria</a></li>
+									<li><a href="limites.html">Limites de Consistencia</a></li>
+								</ul>
+							</li>
+                            <li><a href="ambiental.html">Ambiental</a></li>
+                            <li><a href="mecatronica.html">Mecatronica</a></li>
+                        </ul>
+                    </li>
+			        	<li><a href="#">Login</a></li>
+			      	</ul>
+			    </div><!-- /.navbar-collapse -->
+		  	</div><!-- /.container-fluid -->
+			
+		</div>
+	</nav>
+	<main class="main granulometria">
+		<div class="container">
+			<h2 class="titulo-secundario">
+				Mecatronica- Mecanica - Electrica
+			</h2>
+			<h3 class="titulo-terciario">
+				Parametros del Agua
+			</h3>
+			<form action="">
+				<div class="form-group">
+					<select name="mes" id="mes">
+						<option value="">Enero</option>
+						<option value="">Febrero</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Consultar">
+				</div>
+			</form>
+			<div class="matriz">
+				<div class="encabezado alert-success">
+					<h4>Muestras</h4>
+					<span> - </span>
+					<h4>Enero</h4>
+				</div>
+				<div class="col-md-6">
+					<table class="table table-bordered">
+						<tr style="background-color: #18bc9c;">
+							<th rowspan="2">N de muestra</th>
+							<th rowspan="2">ubicacion</th>
+							<th colspan="2">criterio</th>
+						</tr>
+						<tr style="background-color: #dddddd;">
+							<th>clasificacion</th>
+							<th>cantidad de ph</th>
+						</tr>
+						<tr>
+							<td>001</td>
+							<td>cochas</td>
+							<td>muy alcalino</td>
+							<td>13</td>
+						</tr>
+						<tr>
+							<td>001</td>
+							<td>cochas</td>
+							<td>muy alcalino</td>
+							<td>13</td>
+						</tr>
+						<tr>
+							<td>001</td>
+							<td>cochas</td>
+							<td>muy alcalino</td>
+							<td>13</td>
+						</tr>
+						<tr>
+							<td>001</td>
+							<td>cochas</td>
+							<td>muy alcalino</td>
+							<td>13</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-md-6">
+					<table class="table table-bordered">
+						<tr style="background-color: #18bc9c;">
+							<th>estandar ph segun oms</th>
+							<th colspan="2">clasificacion de ph</th>
+						</tr>
+						<tr>
+							<th style="background-color: #f78c00; color: white;">6.5 - 8.5</th>
+							<th>muy alcalino</th>
+							<td>13 - 14</td>
+						</tr>
+						<tr>
+							<th class="no-border"></th>
+							<th>moderadamente alcalino</th>
+							<td>10 - 12</td>
+						</tr>
+						<tr>
+							<th class="no-border"></th>
+							<th>ligeramente alcalino</th>
+							<td>8 - 10</td>
+						</tr>
+						<tr>
+							<th class="no-border"></th>
+							<th>neutro</th>
+							<td>7</td>
+						</tr>
+						<tr>
+							<th class="no-border"></th>
+							<th>ligamento acido</th>
+							<td>4 - 6</td>
+						</tr>
+						<tr>
+							<th class="no-border"></th>
+							<th>moderadamente acido</th>
+							<td>2 - 4</td>
+						</tr>
+						<tr>
+							<th class="no-border"></th>
+							<th>muy acido</th>
+							<td>0 - 1</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="contacto col-md-6">
+				contacto@continental.edu.pe
+			</div>
+			<div class="derechos col-md-6">
+				Derechos Reservados 2018
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script>
+		 (function($){
+	$(document).ready(function(){
+		$('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+			event.preventDefault(); 
+			event.stopPropagation(); 
+			$(this).parent().siblings().removeClass('open');
+			$(this).parent().toggleClass('open');
+		});
+	});
+})(jQuery);
+	</script>
+</body>
+</html>
